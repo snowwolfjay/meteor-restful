@@ -20,3 +20,12 @@ meteor restful api wrapper for methods
 > example -> api.sequence('/users','create','phonecode')
 >  will request '/users' then use the create rel then phonecode,
 >> why?  when request '/users' if, this request has no auth or some case , no create ref return, blocked it and hide the real url - dynamic or some thing, or even link to anothor server
+
+
+### with this, hope not use plugin at route for bussiness things, otherwise, god knowns what happened when request come up to this handle, so remove global plugin.
+
+### but route("").use(plugin) still work at spec case or export it for other import , this left the import info to track what happened, other then search use("/")-use("/users")....
+
+### and you can combine plugin togeter , and export const LoginAndRoleChecker = [LoginCheck,RoleCheck]
+
+Have fun with restful and links - link's the natural hint and the reason internet boost -- so Just Favor it
